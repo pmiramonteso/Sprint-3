@@ -15,12 +15,30 @@ function getMoviesFromDirector(array, director) {
 
 // Exercise 3: Calculate the average of the films of a given director.
 function moviesAverageOfDirector(array, director) {
-  
+  let directorMovies = array.filter(movie => movie.director === director);
+  if (directorMovies.length === 0) {
+    return 0;
+  }
+  const totalScore = directorMovies.reduce((acc, movie) => {
+    return acc + (movie.score || 0);
+  }, 0);
+ 
+  const directorScore = totalScore / directorMovies.length;
+  let result = parseFloat(directorScore.toFixed(2));
+  console.log('EXERCICE 3 ->', result);
+  return result;
 }
 
 // Exercise 4:  Alphabetic order by title 
 function orderAlphabetically(array) {
+  const result = array
+    .slice()
+    .sort((a, b) => a.title.localeCompare(b.title))
+    .slice(0, 20)
+    .map(movie => movie.title);
   
+  console.log('EXERCICE 4 ->', result);
+  return result;
 }
 
 // Exercise 5: Order by year, ascending
