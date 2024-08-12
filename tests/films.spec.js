@@ -300,11 +300,11 @@ describe('Function "moviesAverageByCategory"', () => {
     expect(typeof moviesAverageByCategory(movies, 'Drama')).toBe('number');
   });
 
-  it('should be different from NaN', () => {
-    expect(moviesAverageByCategory(movies, 'Drama')).not.toBeNaN();
+  it('should return NaN if the category has no movies', () => {
+    expect(moviesAverageByCategory([], 'Unknown Genre')).toBeNaN();
   });
 
-  it(' should return the average score of movies selecting only the genre. With 2 decimals! ', () => {
+  it(' should return the average score by category of movies selecting only the genre. With 2 decimals! ', () => {
     expect(moviesAverageByCategory([
       {
         title: 'Paths of Glory',
@@ -315,12 +315,12 @@ describe('Function "moviesAverageByCategory"', () => {
         score: 8.4
       },
       {
-        title: 'Django Unchained',
-        year: 2012,
-        director: 'Quentin Tarantino',
-        duration: '2h 45min',
-        genre: ['Drama', 'Western'],
-        score: 8.4
+        title: 'Piscores of the Caribbean: The Curse of the Black Pearl',
+        year: 2003,
+        director: 'Gore Verbinski',
+        duration: '2h 23min',
+        genre: ['Action', 'Adventure', 'Fantasy'],
+        score: 8
       },
       {
         title: 'Pulp Fiction',
@@ -330,7 +330,7 @@ describe('Function "moviesAverageByCategory"', () => {
         genre: ['Crime', 'Drama'],
         score: 8.9
       }
-    ], 'Drama')).toBe(8.56);
+    ], 'Drama')).toBe(8.65);
   });
 
 
