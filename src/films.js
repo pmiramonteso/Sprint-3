@@ -1,14 +1,14 @@
 const movies = require('./data.js');
 // Exercise 1: Get the array of all directors.
-function getAllDirectors(array) {
-  let result = array.map(movie => movie.director);
+function getAllDirectors(movies) {
+  let result = movies.map(movie => movie.director);
   console.log("EXERCICE 1 ->", result);
   return result;
 }
 
 // Exercise 2: Get the films of a certain director
-function getMoviesFromDirector(array, director) {
- let result = array.filter(movie => movie.director === director)
+function getMoviesFromDirector(movies, director) {
+ let result = movies.filter(movie => movie.director === director)
  console.log('EXERCICE 2 ->', result);
  return result;
 }
@@ -71,8 +71,8 @@ function moviesAverageByCategory(array, genre) {
 }
 
 // Exercise 7: Modify the duration of movies to minutes
-function hoursToMinutes(movies) {
-  return movies.map(movie => {
+function hoursToMinutes(array) {
+  return array.map(movie => {
 
     let hours = 0;
     let minutes = 0;
@@ -89,7 +89,7 @@ function hoursToMinutes(movies) {
     }
     const totalMinutes = hours * 60 + minutes;
 
-    console.log(`The duration of the movie "${movie.title} is": ${totalMinutes} minutes`);
+    console.log(`EXERCICE 6 -> The duration of the movie "${movie.title} is": ${totalMinutes} minutes`);
 
     return {
       ...movie,
@@ -99,11 +99,18 @@ function hoursToMinutes(movies) {
 }
 
 // Exercise 8: Get the best film of a year
-function bestFilmOfYear() {
-  
+function bestFilmOfYear(array) {
+
+  return Object.values(
+    array.reduce((acc, movie) => {
+      if (!acc[movie.year] || movie.score > acc[movie.year].score) {
+        acc[movie.year] = movie;
+      }
+      console.log(`EXERCICE 7 ->`, acc)
+      return acc;
+    }, {})
+  );
 }
-
-
 
 // The following is required to make unit tests work.
 /* Environment setup. Do not modify the below code. */
