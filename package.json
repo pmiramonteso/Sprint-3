@@ -34,6 +34,8 @@
     ]
   },
   "jest-junit": {
+    "outputDirectory": ".",
+    "outputName": "junit.xml",
     "suiteNameTemplate": "{filepath}",
     "classNameTemplate": "{classname}",
     "titleTemplate": "{title}"
