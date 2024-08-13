@@ -9,7 +9,7 @@ jobs:
       - name: Prepare environment
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: '20.15.1'
           check-latest: true
       - name: Install dependencies
         run: npm i
