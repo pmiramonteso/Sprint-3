@@ -1,86 +1,39 @@
-# Sprint 3 IT Academy | Video management tool
+Superar tests de Javascript
 
-## Introduction
+📄 Descripción
+Este repositorio contiene la base para una aplicación web destinada a la gestión y búsqueda de películas desde una gran base de datos. La aplicación está diseñada para permitir filtrar y ordenar películas de manera eficiente. El proyecto se enfoca en implementar la lógica de filtrado y ordenamiento, utilizando un archivo de datos local en lugar de consultar una API externa.
 
-A company in the audiovisual sector has asked us for a web application that will allow their employees to quickly find movies from a large database they have, since the process is currently done manually.
+✨ Características
+Filtrado y Ordenamiento de Películas: Implementación de la lógica para filtrar y ordenar una lista de películas.
+Datos Locales: Utiliza un archivo de datos local para las operaciones de filtrado y ordenamiento.
 
-You will be in charge of setting up the core of the application: all the logic of filtering and sorting of movies. You have 2 weeks to finish, which is how long this sprint lasts.
+💻 Tecnologías Utilizadas
+HTML5
+JavaScript ES6
+Node.js
+npm
 
-<br>
+📋 Requisitos
+Node.js y npm: Asegúrate de tener Node.js y npm instalados en tu sistema. Puedes descargarlos desde nodejs.org.
 
-## Requirements
+🛠️ Instalación
+✔️ Paso 1: Clona el repositorio:
+git clone https://github.com/pmiramonteso/Sprint-3.git
 
+✔️ Paso 2: Ingresa al directorio del proyecto:
+cd Sprint-3
 
-1. Clone this repo
+✔️ Paso 3: Instala las dependencias:
+npm install
 
-git clone https://github.com/IT-Academy-BCN/starter-code-frontend-sprint-3-movies
+▶️ Ejecución
+Para ver el proyecto en el navegador, abre el archivo HTML "test-results.html" directamente. Si estás utilizando Visual Studio Code, puedes usar la extensión Live Server para una vista en vivo.
 
+🧪 Pruebas
+Para ejecutar los tests y verificar que la lógica implementada cumple con los requisitos, usa el siguiente comando:
+npm test
+Este comando ejecutará los tests definidos en el proyecto. No se requieren instalaciones adicionales para realizar las pruebas.
 
-2. Unlink your repo from the itacademy repository
-```bash
-$ git remote rm origin
-```
-
-3. Link your repo to the repository you have to create in your github account
-```bash
-$ git remote add origin <your repo name!>
-```
-
-<br>
-
-## Submission
-
-1. Upon completion, run the following commands:
-
-```bash
-$ git add .
-$ git commit -m "Sprint Solution"
-$ git push origin master
-```
-
-2. Create Pull Request.
-
-3. Upload the link to the virtual campus so that your mentor can correct it and give you feedback.
-
-
-
-<br>
-
-## Introduction
-
-The statement of the exercise is available on the virtual campus.
-
-<br>
-
-## Tests!
-
-
-```shell
-$ npm install
-$ npm run test:watch
-```
-
-And last, open the generated `test-results.html` file with the "Live Server" VSCode extension to see test results.
-
-Apart from the statement, you will know exactly what you are asked to do by looking at the file `tests/films.spec.js`, all tests are already defined here!
-
-<br>
-
-## Instructions
-
-You have the following indications from the frontend responsible:
-
-- It is mandatory to implement all loops in ES6 (using map, reduce, filter and sort to manipulate arrays).
-
-- As at the moment we don't consume data from a server using an API, we will work with data from the src/data.js archive. For the moment we will implement the logic using
-an array of information about 250 movies.
-
-- The implementation is about processing this array of movies, to display it as requested in each exercise.
-
-- The logic to implement will be placed in the src/films.js file.
-
-- You don't need to show the result of each function on the screen. Your goal is to pass the tests.  More information on how to program oriented to pass tests at the end of the document.
-
-- Don't forget to include the capture of the test results in the virtual campus.
-
+🤝 Contribuciones
+Si deseas colaborar en este proyecto o informar sobre problemas, no dudes en crear un "issue" o enviar un "pull request". Asegúrate de seguir las mejores prácticas y proporcionar una descripción clara de los cambios realizados.
 
